@@ -1,0 +1,11 @@
+Package: fstprobs
+Title: Read and Write 3D Genoprobs Quickly
+Version: 0.0.0.9000
+Authors@R: person("Dan", "Skelly", email = "dan.skelly@jax.org", role = c("aut", "cre"))
+Description: This is an experimental package that is designed for facilitating interactive work with large genotype probability matrices, e.g. those used for qtl mapping with the qtl2 or DOQTL R packages. We start with a 3D matrix of dimension n.samples * n.haplotypes * n.markers, and provide functions to write these data (quickly) to disk, and to read in the data (quickly). The fast read/write is achieved using the fst package. Currently works only with DO/CC-style genoprobs with 8 founders, although this dependency is just a sanity check that dim(probs)[2] == 8. *** This package is pretty useless as the speedup is minimal compared to loading RData, but it was a good exercise! ***
+Depends: R (>= 3.5.0)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: fst, assertthat, abind
+RoxygenNote: 6.0.1
